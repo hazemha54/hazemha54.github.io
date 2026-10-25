@@ -134,23 +134,4 @@ window.PORTFOLIO = {
       image: 'Certification_page.jpg',
     },
   ],
-
-  approach: [
-    {
-      title: 'Modular architecture',
-      text: 'Small modules, explicit interfaces, XML-defined views and security. Each part can be tested, refactored, and shipped independently.',
-    },
-    {
-      title: 'Integrations & automation',
-      text: 'Odoo endpoints talk to n8n and Webhooks: triggers from operational systems, automatic data movement, and alerts that keep the team ahead of failures.',
-    },
-    {
-      title: 'Debugging & legacy improvement',
-      text: 'Careful production diagnostics — query plans, ORM behavior, log analysis — plus incremental improvement of inherited codebases without throwing away what works.',
-    },
-    {
-      title: 'Collaboration in Agile',
-      text: 'Short iteration cycles, clear spec analysis before coding, and documentation that outlives the ticket.',
-    },
-  ],
 };

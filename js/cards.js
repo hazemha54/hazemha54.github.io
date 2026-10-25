@@ -54,18 +54,6 @@
     });
   }
 
-  // ----- approach -----
-  const approachGrid = document.getElementById('approachGrid');
-  if (approachGrid) {
-    data.approach.forEach((a, i) => {
-      const card = el('div', { class: 'approach-card' });
-      card.appendChild(el('span', { class: 'approach-num' }, String(i + 1).padStart(2, '0')));
-      card.appendChild(el('h3', {}, a.title));
-      card.appendChild(el('p', {}, a.text));
-      approachGrid.appendChild(card);
-    });
-  }
-
   // ----- hero summary -----
   const summary = document.getElementById('hero-summary');
   if (summary) summary.textContent = data.identity.summary;
