@@ -80,91 +80,7 @@
                 </div>
 
                 <!-- 3D system diagram -->
-                <div class="hero-stage" aria-hidden="false">
-                    <div class="stage-tilt" id="stageTilt">
-                        <div class="stage-frame">
-                            <svg id="systemDiagram" viewBox="0 0 640 520" role="img" aria-label="Odoo at the center of a business system: CRM, Sales, Inventory, HR and Maintenance modules connected through Python, PostgreSQL and n8n automation to Webhooks and Cloud services">
-                                <defs>
-                                    <radialGradient id="hubGrad" cx="50%" cy="42%" r="65%">
-                                        <stop offset="0%" stop-color="#12312e"/>
-                                        <stop offset="100%" stop-color="#0d1420"/>
-                                    </radialGradient>
-                                    <linearGradient id="tealLine" x1="0" y1="0" x2="1" y2="1">
-                                        <stop offset="0%" stop-color="#3EE6C8" stop-opacity=".7"/>
-                                        <stop offset="100%" stop-color="#3EE6C8" stop-opacity=".15"/>
-                                    </linearGradient>
-                                    <linearGradient id="orangeLine" x1="0" y1="0" x2="1" y2="1">
-                                        <stop offset="0%" stop-color="#FF8A4D" stop-opacity=".8"/>
-                                        <stop offset="100%" stop-color="#FF8A4D" stop-opacity=".2"/>
-                                    </linearGradient>
-                                    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
-                                        <feGaussianBlur stdDeviation="3" result="b"/>
-                                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-                                    </filter>
-                                </defs>
-
-                                <!-- inner module ring links -->
-                                <g class="diagram-links" id="innerLinks">
-                                    <path d="M320 260 L320 140" data-link=""/>
-                                    <path d="M320 260 L438 194" data-link=""/>
-                                    <path d="M320 260 L438 326" data-link=""/>
-                                    <path d="M320 260 L320 380" data-link=""/>
-                                    <path d="M320 260 L202 326" data-link=""/>
-                                    <path d="M320 260 L202 194" data-link=""/>
-                                </g>
-                                <!-- outer system ring links -->
-                                <g class="diagram-links diagram-links--outer" id="outerLinks">
-                                    <path d="M202 194 L110 96" data-link=""/>
-                                    <path d="M438 194 L530 96" data-link=""/>
-                                    <path d="M438 326 L530 424" data-link=""/>
-                                    <path d="M202 326 L110 424" data-link=""/>
-                                </g>
-
-                                <!-- traveling data dots -->
-                                <g id="diagramDots" class="diagram-dots"></g>
-
-                                <!-- module nodes (orbit) -->
-                                <g id="moduleNodes">
-                                    <g class="d-node d-module" data-depth="1.0" transform="translate(320 140)"><rect class="node-box" x="-42" y="-24" width="84" height="48" rx="10"/><text class="node-label" y="5">CRM</text></g>
-                                    <g class="d-node d-module" data-depth="1.2" transform="translate(438 194)"><rect class="node-box" x="-52" y="-24" width="104" height="48" rx="10"/><text class="node-label" y="5">Sales</text></g>
-                                    <g class="d-node d-module" data-depth="0.8" transform="translate(438 326)"><rect class="node-box" x="-52" y="-24" width="104" height="48" rx="10"/><text class="node-label" y="5">Inventory</text></g>
-                                    <g class="d-node d-module" data-depth="1.1" transform="translate(320 380)"><rect class="node-box" x="-40" y="-24" width="80" height="48" rx="10"/><text class="node-label" y="5">HR</text></g>
-                                    <g class="d-node d-module" data-depth="0.9" transform="translate(202 326)"><rect class="node-box" x="-60" y="-24" width="120" height="48" rx="10"/><text class="node-label" y="5">Maintenance</text></g>
-                                    <g class="d-node d-module" data-depth="1.3" transform="translate(202 194)"><rect class="node-box" x="-46" y="-24" width="92" height="48" rx="10"/><text class="node-label" y="5">Purchase</text></g>
-                                </g>
-
-                                <!-- automation hub (orange accent) -->
-                                <g class="d-node d-hub" data-depth="1.4" transform="translate(530 424)">
-                                    <circle class="hub-ring" r="46"/>
-                                    <circle class="hub-core" r="34"/>
-                                    <text class="node-label" y="-2">n8n</text>
-                                    <text class="node-sub" y="14">automate</text>
-                                </g>
-
-                                <!-- central Odoo hub -->
-                                <g class="d-node d-center" data-depth="0.5" transform="translate(320 260)" filter="url(#softGlow)">
-                                    <circle class="center-disc" r="86"/>
-                                    <circle class="center-ring" r="86"/>
-                                    <text class="center-title" y="-6">Odoo</text>
-                                    <text class="center-sub" y="18">ERP core</text>
-                                </g>
-
-                                <!-- outer system nodes -->
-                                <g id="systemNodes">
-                                    <g class="d-node d-system" data-depth="1.6" transform="translate(110 96)"><rect class="node-box" x="-46" y="-22" width="92" height="44" rx="22"/><text class="node-label" y="5">Python</text></g>
-                                    <g class="d-node d-system" data-depth="1.7" transform="translate(530 96)"><rect class="node-box" x="-46" y="-22" width="92" height="44" rx="22"/><text class="node-label" y="5">Postgres</text></g>
-                                    <g class="d-node d-system" data-depth="1.6" transform="translate(110 424)"><rect class="node-box" x="-46" y="-22" width="92" height="44" rx="22"/><text class="node-label" y="5">Webhooks</text></g>
-                                    <g class="d-node d-system" data-depth="1.8" transform="translate(320 40)"><rect class="node-box" x="-40" y="-22" width="80" height="44" rx="22"/><text class="node-label" y="5">Cloud</text></g>
-                                </g>
-                            </svg>
-                        </div>
-                        <p class="stage-caption" data-fx="reveal-up">
-                            <span class="caption-key k-teal">module link</span>
-                            <span class="caption-key k-orange">automation hub</span>
-                            <span class="caption-key k-system">external system</span>
-                        </p>
-                    </div>
-                </div>
+                <div class="hero-stage" aria-hidden="true" style="display: none;"></div>
             </div>
 
             <a class="scroll-cue" href="#about" data-fx="reveal-up" aria-label="Scroll to About section">
@@ -239,7 +155,7 @@
                     </li>
                     <li class="timeline-item">
                         <div class="timeline-period">Feb — Jun 2022</div>
-                        <h3 class="timeline-role">Internship — IoT Developer</h3>
+                        <h3 class="timeline-role">Internship</h3>
                         <p class="timeline-company">CES Lab · “Computer &amp; Embedded Systems”</p>
                         <ul>
                             <li>Developed a medical telemonitoring system integrating IoT technology.</li>
@@ -249,7 +165,7 @@
                     </li>
                     <li class="timeline-item">
                         <div class="timeline-period">Jul — Aug 2019</div>
-                        <h3 class="timeline-role">Internship — Inventory Management</h3>
+                        <h3 class="timeline-role">Internship</h3>
                         <p class="timeline-company">Vitalait</p>
                         <ul>
                             <li>Explored and analyzed inventory processes and identified improvement opportunities.</li>
