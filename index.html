@@ -4,386 +4,390 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Hazem Hadj Ahmed - Odoo/Python Developer</title>
+    <title>Hazem Hadj Ahmed — Odoo &amp; Python Developer</title>
+    <meta name="description" content="Odoo & Python developer with 3+ years of experience building custom ERP modules, API integrations, and automated business processes.">
+    <meta name="author" content="Hazem Hadj Ahmed">
+    <meta property="og:title" content="Hazem Hadj Ahmed — Odoo & Python Developer">
+    <meta property="og:description" content="Custom Odoo modules, API integrations, and automated business processes.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="profile.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <svg id="workflowBackground" viewBox="0 0 1200 800">
-        <defs>
-            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.6" />
-                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
-            </linearGradient>
-            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.6" />
-                <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
-            </linearGradient>
-            <filter id="glow">
-                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                <feMerge>
-                    <feMergeNode in="coloredBlur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-            </filter>
-        </defs>
-        
-        <!-- Workflow Diagram -->
-        <g id="workflowDiagram">
-            <!-- Database -->
-            <g id="database" class="workflow-node">
-                <rect x="50" y="300" width="120" height="80" rx="10" fill="url(#grad1)" opacity="0.3"/>
-                <rect x="50" y="300" width="120" height="80" rx="10" fill="none" stroke="#6366f1" stroke-width="2" filter="url(#glow)"/>
-                <text x="110" y="345" text-anchor="middle" fill="#fff" font-size="14">Database</text>
-            </g>
-            
-            <!-- API Gateway -->
-            <g id="api" class="workflow-node">
-                <circle cx="350" cy="200" r="50" fill="url(#grad1)" opacity="0.3"/>
-                <circle cx="350" cy="200" r="50" fill="none" stroke="#6366f1" stroke-width="2" filter="url(#glow)"/>
-                <text x="350" y="205" text-anchor="middle" fill="#fff" font-size="14">API</text>
-            </g>
-            
-            <!-- Automation Engine -->
-            <g id="automation" class="workflow-node">
-                <polygon points="600,150 700,150 725,200 700,250 600,250 575,200" fill="url(#grad2)" opacity="0.3"/>
-                <polygon points="600,150 700,150 725,200 700,250 600,250 575,200" fill="none" stroke="#ec4899" stroke-width="2" filter="url(#glow)"/>
-                <text x="650" y="205" text-anchor="middle" fill="#fff" font-size="14">n8n</text>
-            </g>
-            
-            <!-- Odoo ERP -->
-            <g id="odoo" class="workflow-node">
-                <rect x="900" y="160" width="120" height="80" rx="10" fill="url(#grad1)" opacity="0.3"/>
-                <rect x="900" y="160" width="120" height="80" rx="10" fill="none" stroke="#6366f1" stroke-width="2" filter="url(#glow)"/>
-                <text x="960" y="205" text-anchor="middle" fill="#fff" font-size="14">Odoo ERP</text>
-            </g>
-            
-            <!-- Webhooks -->
-            <g id="webhooks" class="workflow-node">
-                <circle cx="350" cy="440" r="50" fill="url(#grad2)" opacity="0.3"/>
-                <circle cx="350" cy="440" r="50" fill="none" stroke="#ec4899" stroke-width="2" filter="url(#glow)"/>
-                <text x="350" y="445" text-anchor="middle" fill="#fff" font-size="14">Webhooks</text>
-            </g>
-            
-            <!-- Cloud Services -->
-            <g id="cloud" class="workflow-node">
-                <ellipse cx="650" cy="480" rx="70" ry="50" fill="url(#grad1)" opacity="0.3"/>
-                <ellipse cx="650" cy="480" rx="70" ry="50" fill="none" stroke="#6366f1" stroke-width="2" filter="url(#glow)"/>
-                <text x="650" y="485" text-anchor="middle" fill="#fff" font-size="14">Cloud</text>
-            </g>
-            
-            <!-- Connections -->
-            <path id="conn1" class="connection-line" d="M 170 340 Q 250 270 300 200" fill="none" stroke="url(#grad1)" stroke-width="2"/>
-            <path id="conn2" class="connection-line" d="M 400 200 L 575 200" fill="none" stroke="url(#grad1)" stroke-width="2"/>
-            <path id="conn3" class="connection-line" d="M 725 200 L 900 200" fill="none" stroke="url(#grad2)" stroke-width="2"/>
-            <path id="conn4" class="connection-line" d="M 170 380 Q 250 410 300 440" fill="none" stroke="url(#grad2)" stroke-width="2"/>
-            <path id="conn5" class="connection-line" d="M 400 440 L 580 480" fill="none" stroke="url(#grad1)" stroke-width="2"/>
-            <path id="conn6" class="connection-line" d="M 350 250 L 350 390" fill="none" stroke="url(#grad1)" stroke-width="2"/>
-            
-            <!-- Data Flow Particles -->
-            <circle class="data-particle" r="4" fill="#fff">
-                <animateMotion dur="3s" repeatCount="indefinite">
-                    <mpath href="#conn1"/>
-                </animateMotion>
-            </circle>
-            <circle class="data-particle" r="4" fill="#fff">
-                <animateMotion dur="2s" repeatCount="indefinite">
-                    <mpath href="#conn2"/>
-                </animateMotion>
-            </circle>
-            <circle class="data-particle" r="4" fill="#fff">
-                <animateMotion dur="2.5s" repeatCount="indefinite">
-                    <mpath href="#conn3"/>
-                </animateMotion>
-            </circle>
-        </g>
-    </svg>
-    
-    <nav class="nav">
-        <div class="nav-brand">
-            <span class="bracket">&lt;</span>
-            <span class="dev-text">Hazem Hadj Ahmed                                                                                                                                             </span>
-            <span class="bracket">/&gt;</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#badges">Badges</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <a class="skip-link" href="#hero">Skip to content</a>
 
-    <section id="about" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="profile-section">
-                    <div class="profile-image">
-                        <img src="profile.jpg" alt="Profile Picture">
-                        <div class="profile-ring"></div>
-                    </div>
-                    <a href="Hazem_Hadj_Ahmed.pdf" download class="btn btn-download">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download CV
-                    </a>
-                </div>
-                <div class="title-wrapper">
-                    <h1 class="hero-title">
-                        <span class="line">Odoo/Python Developer</span>
-<!--                        <span class="line">& Workflow Automation</span>-->
-<!--                        <span class="line">Specialist</span>-->
+    <canvas id="grid-bg" aria-hidden="true"></canvas>
+
+    <header class="site-nav" id="siteNav">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#hero">
+                <span class="nav-mark" aria-hidden="true">HA</span>
+                <span class="nav-name">Hazem Hadj Ahmed</span>
+            </a>
+            <nav class="nav-links" aria-label="Primary">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Expertise</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#approach">Approach</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-meta">
+                <span class="status-chip" id="statusChip">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Available
+                </span>
+                <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile" hidden>
+            <a href="#about">About</a>
+            <a href="#skills">Expertise</a>
+            <a href="#experience">Experience</a>
+            <a href="#approach">Approach</a>
+            <a href="#contact">Contact</a>
+            <a class="mobile-cv" href="Hazem_Hadj_Ahmed.pdf" download>Download CV</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section id="hero" class="hero" aria-labelledby="hero-name">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="hero-eyebrow" data-fx="reveal-up">
+                        <span class="eyebrow-dot" aria-hidden="true"></span>
+                        Odoo &amp; Python Developer · 3+ years
+                    </p>
+                    <h1 id="hero-name" class="hero-name">
+                        <span class="hero-line" data-fx="char-reveal">Hazem Hadj Ahmed</span>
                     </h1>
-                </div>
-                <p class="hero-subtitle">Experienced Python/Odoo developer proficient in leveraging Python programming expertise within the Odoo framework. Skilled in customizing and developing tailored solutions to meet diverse client needs. Strong background in system integration, module development, and problem-solving. Dedicated to delivering high-quality code and optimizing workflows to enhance business efficiency.</p>
-                <div class="cta-buttons">
-                    <a href="mailto:hazemhajahmed@gmail.com" class="btn btn-primary">Get In Touch</a>
-                    <a href="#experience" class="btn btn-secondary">View Work</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-block">
-                    <div class="code-line"><span class="keyword">class</span> <span class="class-name">AutomationExpert</span>:</div>
-                    <div class="code-line indent1"><span class="keyword">def</span> <span class="function">__init__</span>(self):</div>
-                    <div class="code-line indent2">self.odoo = <span class="string">"Expert"</span></div>
-                    <div class="code-line indent2">self.n8n = <span class="string">"Creator"</span></div>
-                    <div class="code-line indent2">self.workflows = <span class="string">"Automated"</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-line"></span>
-                Technical Skills
-                <span class="title-line"></span>
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-card" data-skill="odoo">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 100 100">
-                            <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" />
-                        </svg>
-                    </div>
-                    <h3>Odoo Development</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>OWL</span>
-                        <span>XML</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="95"></div>
+                    <p class="hero-role" data-fx="reveal-up">
+                        I build custom Odoo modules, API integrations, and automated business processes — ERP engineering that keeps running.
+                    </p>
+                    <p class="hero-sub" data-fx="reveal-up" id="hero-summary"></p>
+                    <div class="hero-cta" data-fx="reveal-up">
+                        <a class="btn btn-primary" href="#contact">Contact</a>
+                        <button class="btn btn-text" id="cvBtn" type="button">
+                            Download CV
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v14M6 13l6 6 6-6"/></svg>
+                        </button>
                     </div>
                 </div>
 
-                <div class="skill-card" data-skill="python">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 100 100">
-                            <rect x="30" y="20" width="40" height="15" />
-                            <rect x="30" y="42" width="40" height="15" />
-                            <rect x="30" y="64" width="40" height="15" />
-                        </svg>
-                    </div>
-                    <h3>Python</h3>
-                    <div class="skill-tags">
-                        <span>Scripting</span>
-                        <span>APIs</span>
-                        <span>Data Processing</span>
-                        <span>Automation</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="90"></div>
-                    </div>
-                </div>
+                <!-- 3D system diagram -->
+                <div class="hero-stage" aria-hidden="false">
+                    <div class="stage-tilt" id="stageTilt">
+                        <div class="stage-frame">
+                            <svg id="systemDiagram" viewBox="0 0 640 520" role="img" aria-label="Odoo at the center of a business system: CRM, Sales, Inventory, HR and Maintenance modules connected through Python, PostgreSQL and n8n automation to Webhooks and Cloud services">
+                                <defs>
+                                    <radialGradient id="hubGrad" cx="50%" cy="42%" r="65%">
+                                        <stop offset="0%" stop-color="#12312e"/>
+                                        <stop offset="100%" stop-color="#0d1420"/>
+                                    </radialGradient>
+                                    <linearGradient id="tealLine" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#3EE6C8" stop-opacity=".7"/>
+                                        <stop offset="100%" stop-color="#3EE6C8" stop-opacity=".15"/>
+                                    </linearGradient>
+                                    <linearGradient id="orangeLine" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#FF8A4D" stop-opacity=".8"/>
+                                        <stop offset="100%" stop-color="#FF8A4D" stop-opacity=".2"/>
+                                    </linearGradient>
+                                    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+                                        <feGaussianBlur stdDeviation="3" result="b"/>
+                                        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                    </filter>
+                                </defs>
 
-                <div class="skill-card" data-skill="database">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 100 100">
-                            <ellipse cx="50" cy="35" rx="25" ry="10" />
-                            <path d="M25 35 L25 65 A25 10 0 0 0 75 65 L75 35" />
-                            <line x1="25" y1="50" x2="75" y2="50" />
-                        </svg>
-                    </div>
-                    <h3>Databases</h3>
-                    <div class="skill-tags">
-                        <span>PostgreSQL</span>
-                        <span>MySQL</span>
-                        <span>SQL</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="85"></div>
-                    </div>
-                </div>
+                                <!-- inner module ring links -->
+                                <g class="diagram-links" id="innerLinks">
+                                    <path d="M320 260 L320 140" data-link=""/>
+                                    <path d="M320 260 L438 194" data-link=""/>
+                                    <path d="M320 260 L438 326" data-link=""/>
+                                    <path d="M320 260 L320 380" data-link=""/>
+                                    <path d="M320 260 L202 326" data-link=""/>
+                                    <path d="M320 260 L202 194" data-link=""/>
+                                </g>
+                                <!-- outer system ring links -->
+                                <g class="diagram-links diagram-links--outer" id="outerLinks">
+                                    <path d="M202 194 L110 96" data-link=""/>
+                                    <path d="M438 194 L530 96" data-link=""/>
+                                    <path d="M438 326 L530 424" data-link=""/>
+                                    <path d="M202 326 L110 424" data-link=""/>
+                                </g>
 
-                <div class="skill-card" data-skill="frontend">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 100 100">
-                            <rect x="20" y="30" width="60" height="40" rx="5" />
-                            <line x1="20" y1="45" x2="80" y2="45" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3>Frontend & Tools</h3>
-                    <div class="skill-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Docker</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="80"></div>
+                                <!-- traveling data dots -->
+                                <g id="diagramDots" class="diagram-dots"></g>
+
+                                <!-- module nodes (orbit) -->
+                                <g id="moduleNodes">
+                                    <g class="d-node d-module" data-depth="1.0" transform="translate(320 140)"><rect class="node-box" x="-42" y="-24" width="84" height="48" rx="10"/><text class="node-label" y="5">CRM</text></g>
+                                    <g class="d-node d-module" data-depth="1.2" transform="translate(438 194)"><rect class="node-box" x="-52" y="-24" width="104" height="48" rx="10"/><text class="node-label" y="5">Sales</text></g>
+                                    <g class="d-node d-module" data-depth="0.8" transform="translate(438 326)"><rect class="node-box" x="-52" y="-24" width="104" height="48" rx="10"/><text class="node-label" y="5">Inventory</text></g>
+                                    <g class="d-node d-module" data-depth="1.1" transform="translate(320 380)"><rect class="node-box" x="-40" y="-24" width="80" height="48" rx="10"/><text class="node-label" y="5">HR</text></g>
+                                    <g class="d-node d-module" data-depth="0.9" transform="translate(202 326)"><rect class="node-box" x="-60" y="-24" width="120" height="48" rx="10"/><text class="node-label" y="5">Maintenance</text></g>
+                                    <g class="d-node d-module" data-depth="1.3" transform="translate(202 194)"><rect class="node-box" x="-46" y="-24" width="92" height="48" rx="10"/><text class="node-label" y="5">Purchase</text></g>
+                                </g>
+
+                                <!-- automation hub (orange accent) -->
+                                <g class="d-node d-hub" data-depth="1.4" transform="translate(530 424)">
+                                    <circle class="hub-ring" r="46"/>
+                                    <circle class="hub-core" r="34"/>
+                                    <text class="node-label" y="-2">n8n</text>
+                                    <text class="node-sub" y="14">automate</text>
+                                </g>
+
+                                <!-- central Odoo hub -->
+                                <g class="d-node d-center" data-depth="0.5" transform="translate(320 260)" filter="url(#softGlow)">
+                                    <circle class="center-disc" r="86"/>
+                                    <circle class="center-ring" r="86"/>
+                                    <text class="center-title" y="-6">Odoo</text>
+                                    <text class="center-sub" y="18">ERP core</text>
+                                </g>
+
+                                <!-- outer system nodes -->
+                                <g id="systemNodes">
+                                    <g class="d-node d-system" data-depth="1.6" transform="translate(110 96)"><rect class="node-box" x="-46" y="-22" width="92" height="44" rx="22"/><text class="node-label" y="5">Python</text></g>
+                                    <g class="d-node d-system" data-depth="1.7" transform="translate(530 96)"><rect class="node-box" x="-46" y="-22" width="92" height="44" rx="22"/><text class="node-label" y="5">Postgres</text></g>
+                                    <g class="d-node d-system" data-depth="1.6" transform="translate(110 424)"><rect class="node-box" x="-46" y="-22" width="92" height="44" rx="22"/><text class="node-label" y="5">Webhooks</text></g>
+                                    <g class="d-node d-system" data-depth="1.8" transform="translate(320 40)"><rect class="node-box" x="-40" y="-22" width="80" height="44" rx="22"/><text class="node-label" y="5">Cloud</text></g>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="stage-caption" data-fx="reveal-up">
+                            <span class="caption-key k-teal">module link</span>
+                            <span class="caption-key k-orange">automation hub</span>
+                            <span class="caption-key k-system">external system</span>
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-line"></span>
-                Work Experience
-                <span class="title-line"></span>
-            </h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">02/2023 – Present</div>
-                        <h3>Odoo/Python Developer</h3>
-                        <h4>Infotech Consulting Services (ICS)</h4>
+            <a class="scroll-cue" href="#about" data-fx="reveal-up" aria-label="Scroll to About section">
+                <span class="scroll-cue-line"></span>
+                <span class="scroll-cue-text">scroll</span>
+            </a>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container">
+                <header class="section-head" data-fx="reveal-up">
+                    <span class="section-eyebrow">01 · Profile</span>
+                    <h2 id="about-title">Engineering background, <em>ERP focus</em></h2>
+                </header>
+                <div class="about-grid">
+                    <div class="about-portrait" data-fx="reveal-up">
+                        <img src="profile.jpg" alt="Portrait of Hazem Hadj Ahmed" loading="lazy" width="356" height="472">
+                        <div class="portrait-meta">
+                            <span class="meta-line"><strong>3+</strong> years on Odoo</span>
+                            <span class="meta-line"><strong>2022</strong> CS degree</span>
+                            <span class="meta-line"><strong>ICS</strong> developer</span>
+                        </div>
+                    </div>
+                    <div class="about-copy" data-fx="reveal-up">
+                        <p>
+                            I came to Odoo through computer engineering: a bachelor from the Higher Institute of Computer
+                            Science in Mahdia, then work in an IoT research lab where I built a medical telemonitoring
+                            system. Since 2023 I've developed and supported production Odoo systems at ICS — turning
+                            functional specs into modules, APIs, and automated workflows.
+                        </p>
+                        <p>
+                            My approach is integration-first and modular by design: small well-tested modules,
+                            clean PostgreSQL, and n8n automations that connect the ERP to the rest of the business.
+                        </p>
+                        <ol class="principle-list" id="principleList"></ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TECHNICAL EXPERTISE ============ -->
+        <section id="skills" class="section" aria-labelledby="skills-title">
+            <div class="container">
+                <header class="section-head" data-fx="reveal-up">
+                    <span class="section-eyebrow">03 · Technical expertise</span>
+                    <h2 id="skills-title">Capability matrix</h2>
+                    <p class="section-lede">Grouped by what I actually do — with a <span class="depth-scale">working-depth scale</span> instead of arbitrary percentages.</p>
+                </header>
+                <div class="skills-matrix" id="skillsMatrix"></div>
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience" class="section section-alt" aria-labelledby="exp-title">
+            <div class="container">
+                <header class="section-head" data-fx="reveal-up">
+                    <span class="section-eyebrow">04 · Career</span>
+                    <h2 id="exp-title">Experience</h2>
+                </header>
+                <ol class="timeline">
+                    <li class="timeline-item current">
+                        <div class="timeline-period">Feb 2023 — Present <span class="current-flag">current</span></div>
+                        <h3 class="timeline-role">Odoo / Python Developer</h3>
+                        <p class="timeline-company">Infotech Consulting Services (ICS)</p>
                         <ul>
-                            <li>Application development using Odoo framework & components</li>
-                            <li>Bug fixing, performance optimization, production support</li>
-                            <li>Review technical setups & configuration and take corrective actions</li>
-                            <li>Analyze and clarify functional specifications, write technical design</li>
+                            <li>Application development on the Odoo framework and its component model — modules, models, views, and business logic.</li>
+                            <li>Bug fixing, performance optimization, and production support for deployed Odoo environments.</li>
+                            <li>Technical reviews of setups and configurations, with corrective action when the production behavior doesn’t match the design.</li>
+                            <li>Functional-spec analysis and technical design writing before implementation.</li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">02/2022 – 06/2022</div>
-                        <h3>Internship – IoT Developer</h3>
-                        <h4>Research lab "Computer & Embedded Systems" (CES lab)</h4>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-period">Feb — Jun 2022</div>
+                        <h3 class="timeline-role">Internship — IoT Developer</h3>
+                        <p class="timeline-company">CES Lab · “Computer &amp; Embedded Systems”</p>
                         <ul>
-                            <li>Developed a medical telemonitoring system integrating IoT technology</li>
-                            <li>Assisted in analyzing and interpreting data from IoT devices for healthcare</li>
-                            <li>Worked on integrating IoT devices for remote medical monitoring</li>
+                            <li>Developed a medical telemonitoring system integrating IoT technology.</li>
+                            <li>Analyzed and interpreted data streamed from IoT devices for the healthcare monitoring use case.</li>
+                            <li>Worked on the device-integration layer of remote patient monitoring.</li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">07/2019 – 08/2019</div>
-                        <h3>Internship – Inventory Management</h3>
-                        <h4>Vitalait</h4>
+                    </li>
+                    <li class="timeline-item">
+                        <div class="timeline-period">Jul — Aug 2019</div>
+                        <h3 class="timeline-role">Internship — Inventory Management</h3>
+                        <p class="timeline-company">Vitalait</p>
                         <ul>
-                            <li>Explored and analyzed inventory processes, identifying improvement opportunities</li>
-                            <li>Assisted in optimizing inventory management through workflow enhancements</li>
-                            <li>Collaborated with team members to streamline processes and improve efficiency</li>
-                            <li>Gained hands-on experience with inventory systems and management</li>
+                            <li>Explored and analyzed inventory processes and identified improvement opportunities.</li>
+                            <li>Assisted in optimizing inventory management through workflow enhancements.</li>
+                            <li>Collaborated with team members to streamline processes and improve efficiency.</li>
                         </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ EDUCATION ============ -->
+        <section id="education" class="section" aria-labelledby="edu-title">
+            <div class="container">
+                <header class="section-head" data-fx="reveal-up">
+                    <span class="section-eyebrow">05 · Education</span>
+                    <h2 id="edu-title">Foundation</h2>
+                </header>
+                <div class="edu-grid">
+                    <div class="edu-card">
+                        <div class="edu-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/></svg>
+                        </div>
+                        <div>
+                            <h3>Bachelor in Computer Engineering</h3>
+                            <p class="edu-school">Higher Institute of Computer Science — Mahdia</p>
+                            <p class="edu-year">Class of 2022</p>
+                        </div>
+                    </div>
+                    <div class="edu-card edu-card--high">
+                        <div class="edu-icon edu-icon--high">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>
+                        </div>
+                        <div>
+                            <h3>High School Diploma</h3>
+                            <p class="edu-school">Abu Kacem Chebbi</p>
+                            <p class="edu-year">Class of 2018</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-line"></span>
-                Education
-                <span class="title-line"></span>
-            </h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="edu-icon">🎓</div>
-                    <h3>Bachelor Degree in Computer Science</h3>
-                    <p class="edu-school">Higher Institute of Computer Science Mahdia</p>
-                    <p class="edu-year">2022</p>
-
-                </div>
-
-                <div class="education-card">
-                    <div class="edu-icon">📜</div>
-                    <h3>High School Degree</h3>
-                    <p class="edu-school">Abu Kacem Chebbi</p>
-                    <p class="edu-year">2018</p>
-
+        <!-- ============ CERTIFICATIONS ============ -->
+        <section id="certs" class="section section-alt" aria-labelledby="certs-title">
+            <div class="container">
+                <header class="section-head" data-fx="reveal-up">
+                    <span class="section-eyebrow">06 · Certification</span>
+                    <h2 id="certs-title">Credential</h2>
+                </header>
+                <div class="cert-stage" data-fx="card-tilt-in">
+                    <button class="cert-card" id="certCard" type="button" aria-label="Expand Odoo 19 Functional Certification">
+                        <img class="cert-thumb" src="Certification_page.jpg" alt="Odoo 19 Functional Certification page" loading="lazy">
+                        <div class="cert-info">
+                            <h3>Odoo 19 Functional Certification</h3>
+                            <p>Odoo S.A. · earned 2026</p>
+                        </div>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="badges" class="badges">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-line"></span>
-                Certifications
-                <span class="title-line"></span>
-            </h2>
-            <div class="badges-gallery">
-                <div class="badge-item" onclick="openLightbox(this.querySelector('img').src)">
-                    <div class="badge-image">
-                        <img src="Certification_page.jpg" alt="Odoo 19 Functional Certification">
+        <!-- ============ ENGINEERING APPROACH ============ -->
+        <section id="approach" class="section" aria-labelledby="approach-title">
+            <div class="container">
+                <header class="section-head" data-fx="reveal-up">
+                    <span class="section-eyebrow">07 · Approach</span>
+                    <h2 id="approach-title">How I engineer</h2>
+                    <p class="section-lede">The non-code half of the work — the decisions that make modules keep running.</p>
+                </header>
+                <div class="approach-grid" id="approachGrid"></div>
+                <div class="flow-strip" data-fx="reveal-up" aria-label="Integration flow: Odoo ERP triggers n8n automation, which moves data between Webhooks, Cloud and PostgreSQL">
+                    <div class="flow-node">
+                        <span class="flow-key">Odoo ERP</span>
                     </div>
-                    <h3>Odoo 19 Functional Certification</h3>
-                    <p>Odoo S.A.</p>
+                    <span class="flow-arrow" aria-hidden="true">
+                        <svg width="56" height="10" viewBox="0 0 56 10"><line x1="0" y1="5" x2="48" y2="5" class="flow-dash"/><path d="M46 1 L54 5 L46 9 Z"/></svg>
+                    </span>
+                    <div class="flow-node flow-node--hub">
+                        <span class="flow-key">n8n · automate</span>
+                    </div>
+                    <span class="flow-arrow" aria-hidden="true">
+                        <svg width="56" height="10" viewBox="0 0 56 10"><line x1="0" y1="5" x2="48" y2="5" class="flow-dash"/><path d="M46 1 L54 5 L46 9 Z"/></svg>
+                    </span>
+                    <div class="flow-node">
+                        <span class="flow-key">Webhooks · Cloud · Postgres</span>
+                    </div>
                 </div>
             </div>
-            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-                <span class="lightbox-close">&times;</span>
-                <img class="lightbox-content" id="lightboxImg">
-            </div>
-                    <h3>Odoo 19 Functional Certification</h3>
-                    <p>Odoo S.A.</p>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="section section-contact" aria-labelledby="contact-title">
+            <div class="container contact-inner">
+                <div data-fx="reveal-up">
+                    <span class="section-eyebrow">08 · Contact</span>
+                    <h2 id="contact-title">Let's build your <em>ERP work</em>.</h2>
+                    <p class="contact-lede">Have a module to build, an integration to design, or a legacy system to untangle? I reply fast.</p>
+                </div>
+                <div class="contact-actions" data-fx="reveal-up">
+                    <a class="btn btn-primary btn-email" href="mailto:hazemhajahmed@gmail.com">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+                        hazemhajahmed@gmail.com
+                    </a>
+                    <div class="social-row">
+                        <a class="social-link" href="https://github.com/hazemha54" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.81.58.11.79-.25.79-.56v-1.97c-3.2.69-4.04-1.24-4.04-1.24-.55-1.22-1.34-1.55-1.34-1.55-1.09-.66.08-.65.08-.65 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.49-1.33-5.49-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.29-1.23 3.29-1.23.67 1.66.25 2.88.13 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.82 5.62-5.5 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.68.8.56C20.7 21.39 24 17.08 24 12 24 5.65 18.85.5 12 .5z" transform="scale(0.92) translate(1 1)"/></svg>
+                            GitHub
+                        </a>
+                        <a class="social-link" href="https://www.linkedin.com/in/hazemhadjahmed/" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                            LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-line"></span>
-                Get In Touch
-                <span class="title-line"></span>
-            </h2>
-            <div class="contact-simple">
-                <p>Have a project in mind or need help with Odoo development? I'd love to hear from you!</p>
-                <a href="mailto:hazemhajahmed@gmail.com" class="btn btn-primary btn-email">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                    Send me an email
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Odoo/Python Developer. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/hazemha54" aria-label="GitHub" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/hazemhadjahmed/" aria-label="LinkedIn" target="_blank">LinkedIn</a>
-            </div>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 Hazem Hadj Ahmed. All rights reserved.</p>
+            <a class="back-to-top" href="#hero">Back to top ↑</a>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certification image" hidden>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+        <img class="lightbox-content" id="lightboxImg" alt="Odoo 19 Functional Certification">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="js/content.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/hero3d.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
